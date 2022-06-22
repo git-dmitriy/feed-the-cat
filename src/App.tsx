@@ -1,3 +1,9 @@
+import { FlexContainer } from './components/FlexContainer';
+import { Tagline } from './components/Tagline';
+import { data } from './data';
+import { YammyCard } from './components/card/YammyCard';
+import { useState } from 'react';
+
 function App() {
   const [appData, setAppData] = useState([...data]);
 
@@ -30,10 +36,22 @@ function App() {
 
     setAppData(cards);
   };
+
   return (
-    <div>
-      <p>feed the cat .__.</p>
-    </div>
+    <>
+      <Tagline>Ты сегодня покормил кота?</Tagline>
+
+      <FlexContainer alignItems='center' flexWrap='wrap'>
+        {appData.map((card) => (
+          <YammyCard
+            key={card.id}
+            card={card}
+            onClickHandler={onClickHandler}
+            onMouseLeaveHandler={onMouseLeaveHandler}
+          />
+        ))}
+      </FlexContainer>
+    </>
   );
 }
 
