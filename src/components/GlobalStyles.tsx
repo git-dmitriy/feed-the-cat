@@ -42,12 +42,12 @@ body {
     url(/pattern-bg.png) 1x,
     url(/pattern-bg-2x.png) 2x
   );
+  display: grid;
 }
 
 
 #root {
   height: 100%;
-  
 }
 
 @media (min-width: 1024px) {
@@ -69,14 +69,14 @@ h1 {
 }
 
 hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 pre {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 a {
@@ -84,9 +84,9 @@ a {
 }
 
 abbr[title] {
-  border-bottom: none; 
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 b,
@@ -98,7 +98,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em; 
+  font-size: 1em;
 }
 
 small {
@@ -130,10 +130,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  line-height: 1.15; 
-  margin: 0; 
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 button,
