@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="320" height="480">
+<defs>
+    <clipPath id="cp">
+        <polygon points="45,0 320,0 320,480 0,480 0,48"/>
+    </clipPath>
+</defs>
+<g stroke="#2ea8e6" stroke-width="4">
+    <rect x="2" y="2" rx="14" clip-path="url(#cp)" width="316" height="476" fill="#f2f2f2"/>
+    <line x1="2" y1="48" x2="45" y2="2"/>
+</g>
+</svg>
