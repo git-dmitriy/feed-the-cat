@@ -1,9 +1,11 @@
-export const theme = {
+import { ThemeTypes } from './AppTypes';
+
+export const theme: ThemeTypes = {
   colors: {
     default: '#1698d9',
     defaultHover: '#2ea8e6',
-    select: '#d91667',
-    selectHover: '#e52e7a',
+    selected: '#d91667',
+    selectedHover: '#e52e7a',
     selectHoverSlogan: '#e62e7a',
     disable: '#b3b3b3',
     disableText: '#ffff66',
