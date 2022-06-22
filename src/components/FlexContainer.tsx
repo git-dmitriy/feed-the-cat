@@ -9,6 +9,7 @@ type P = {
     | 'center'
     | 'space-between'
     | 'space-around';
+  flexWrap?: 'wrap' | 'wrap-reverse' | 'inherit';
   paddingBlock?: string;
   paddingInline?: string;
   marginBlock?: string;
@@ -21,6 +22,7 @@ export const FlexContainer = styled.div<P>`
   display: flex;
   flex-direction: ${({ direction }) => direction || 'row'};
   justify-content: ${({ justifyContent }) => justifyContent || 'center'};
+  flex-wrap: ${({ flexWrap }) => flexWrap || 'no-wrap'};
   align-items: ${({ alignItems }) => alignItems || 'center'};
   margin-block: ${({ marginBlock }) => marginBlock || 0};
   margin-inline: ${({ marginInline }) => marginInline || 0};
