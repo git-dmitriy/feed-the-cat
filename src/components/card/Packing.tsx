@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme } from '../theme';
+import { getColor } from '../../helpers/getColor';
 
 const Circle = styled.p<{ color: string }>`
   position: absolute;
@@ -13,9 +13,9 @@ const Circle = styled.p<{ color: string }>`
   block-size: 80px;
   font-size: 42px;
   margin: 0;
-  color: ${theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   border-radius: 100%;
-  background-color: ${(props) => props.color || theme.colors.default};
+  background-color: ${(props) => props.theme.colors[props.color]};
 `;
 
 const Measure = styled.span`
@@ -24,11 +24,14 @@ const Measure = styled.span`
 `;
 
 type P = {
-  color?: string;
+  state: string;
+  isHover: boolean;
   children: React.ReactNode;
 };
 
-export const Packing = ({ color = '', children }: P) => {
+export const Packing = ({ state, isHover, children }: P) => {
+  const color = getColor(state, isHover);
+
   return (
     <Circle color={color && color}>
       {children}
